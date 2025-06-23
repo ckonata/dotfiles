@@ -1,42 +1,63 @@
---vim.cmd("let g:netrw_banner = 0") --disables the banner at the top file explorer 
+-- Set <space> as the leader key
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
---vim.opt.guicursor = "" --set block cursor
-vim.opt.nu = true -- enable absolute line numbers
+-- Set to true if you have a Nerd Font installed and selected in the terminal
+vim.g.have_nerd_font = true
+
+-- [[ Setting options ]]
+-- See `:help vim.o`
+-- NOTE: You can change these options as you wish!
+--  For more options, you can see `:help option-list`
+-- Make line numbers default
+vim.o.number = true
 vim.opt.relativenumber = true
-
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
-vim.opt.expandtab = true --inset spaces instead of real tab characters when tab is pressed
+vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
+vim.opt.breakindent = true
 vim.opt.wrap = false
 
-vim.swapfile = false --it is safe if combined with undofile
+vim.opt.swapfile = false -- safe if used combine with undofile
+vim.opt.undofile = true -- enable undo changes after restarting neovim
 vim.opt.backup = false
-vim.opt.undofile = true --undo changes after restarting neovim
 
-vim.opt.incsearch = true
-vim.opt.inccommand = "split"
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+vim.o.mouse = "a"
 
-vim.opt.termguicolors = true --enable full RGB colors
+vim.o.showmode = false -- do not show the mode, its in the status line
+
+-- Sync clipboard between OS and Neovim.
+--  See `:help 'clipboard'`
+vim.schedule(function()
+	vim.o.clipboard = "unnamedplus"
+end)
+
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.incsearch = true
+
+vim.opt.termguicolors = true
 vim.opt.background = "dark"
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes" --shows the sign column on the left side of the screen, showing git symbols, breakpoints, etc
+vim.opt.scrolloff = 10
+vim.o.signcolumn = "yes" -- shows signs on the left side of the screen
 
-vim.opt.backspace = {"start", "eol", "indent"}
+vim.o.updatetime = 250 -- decrease update time
+vim.o.timeoutlen = 300 -- decrease mapped sequence wait time
 
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+-- Configure how new splits should be opened
+vim.o.splitright = true
+vim.o.splitbelow = true
 
-vim.opt.updatetime = 50
---vim.opt.colorcolumn = "120"
+vim.o.list = false
+--vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
-vim.opt.clipboard:append("unnamedplus")
-vim.opt.hlsearch = true
+vim.o.inccommand = "split" -- preview sustitutions live
 
-vim.opt.mouse = "a"
-vim.g.editorconfig = true
+vim.o.cursorline = true
 
+-- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
+-- instead raise a dialog asking if you wish to save the current file(s)
+vim.o.confirm = true
