@@ -29,8 +29,9 @@ return {
 			end
 		end,
 		formatters_by_ft = {
-			lua = { "stylua" },
+			--lua = { "stylua" },
 			c = { "clang_format" }, -- On Windows you need to run "winget install LLVM.LLVM" and add clang-format.exe folder to your path environment
+			cpp = { "clang_format" },
 			-- Conform can also run multiple formatters sequentially
 			-- python = { "isort", "black" },
 			--
