@@ -1,0 +1,13 @@
+{
+  "cssTheme": "Tiniri",
+  "theme": "obsidian",
+  "interfaceFontFamily": "Hack Nerd Font,Cascadia Mono",
+  "textFontFamily": "Hack Nerd Font,Cascadia Mono",
+  "baseFontSizeAction": true,
+  "baseFontSize": 15,
+  "enabledCssSnippets": [
+    "org-sidian-color",
+    "org-sidian"
+  ],
+  "accentColor": ""
+}

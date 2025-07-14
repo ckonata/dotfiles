@@ -1,0 +1,9 @@
+{
+  "promptDelete": false,
+  "showLineNumber": true,
+  "vimMode": true,
+  "newFileLocation": "folder",
+  "attachmentFolderPath": "attachments",
+  "livePreview": false,
+  "newFileFolderPath": "vault/00 - source"
+}

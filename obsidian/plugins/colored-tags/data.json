@@ -1,0 +1,18 @@
+{
+  "palette": {
+    "seed": 0,
+    "selected": "custom",
+    "custom": "aca1cf-ea83a5-90b99f-e29eca-f5a191-c1c0d4-e6b99d"
+  },
+  "mixColors": true,
+  "transition": true,
+  "accessibility": {
+    "highTextContrast": true
+  },
+  "knownTags": {
+    "felicidad": 1,
+    "dinero": 2,
+    "cooking": 3
+  },
+  "_version": 3
+}
